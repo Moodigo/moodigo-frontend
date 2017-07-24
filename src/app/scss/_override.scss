@@ -1,0 +1,52 @@
+input[type="search"] {
+    margin-top: 20px;
+}
+
+$nav-height: 45px;
+$input-search-border: 5px;
+
+body {
+    nav {
+        height: $nav-height;
+        line-height: $nav-height;
+
+        .button-collapse i {
+            height: $nav-height;
+            line-height: $nav-height;
+        }
+        .brand-logo {
+            font-size: 1.6rem;
+        }
+
+        [class^="mdi-"],
+        [class*="mdi-"],
+        i.material-icons {
+            height: $nav-height;
+            line-height: $nav-height;
+        }
+        input[type=search],
+        input[type=search]:focus {
+            height: $nav-height - 2*$input-search-border;
+            min-height: 0;
+            margin-bottom: 0;
+
+        }
+
+        .dropdown-content {
+            li a {
+                i {
+                    display: inline-block;
+                    vertical-align: -6px;
+                    float: none;
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 601px) {
+        nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+            height: $nav-height;
+            line-height: $nav-height;
+        }
+    }
+}

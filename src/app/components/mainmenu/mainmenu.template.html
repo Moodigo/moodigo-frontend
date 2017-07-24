@@ -1,0 +1,40 @@
+<nav>
+    <div class="nav-wrapper container">
+        <div class="left">
+            <div class="input-field main-menu__search input-field__static-icon">
+                <i class="mdi mdi-magnify prefix text-gray"></i>
+                <input id="search" type="search" class="white lighten-3"/>
+            </div>
+
+        </div>
+        <div class="right">
+            <ul>
+                <li>
+                    <a class="waves-effect waves-light transparent wave">
+                        <div class="chip">
+                            <img src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-1/p24x24/19510243_10156386712686038_5559343650090816987_n.jpg?oh=cc4d2d7f3579feca79114e2aa70604ee&oe=5A08A94B"
+                                 alt="Contact Person">
+                            Adam
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="waves-effect waves-light transparent">
+                        <i class="material-icons">turned_in_not</i>
+                    </a>
+                </li>
+                <li>
+                    <a class="waves-effect waves-light dropdown-button tran3parent" data-activates='main-menu-dropdown'>
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <ul id='main-menu-dropdown' class='dropdown-content'>
+                        <li><a href="#!">{{'main-menu.profile'|translate}}</a></li>
+                        <li><a href="#!"><i class="material-icons">cloud</i>{{'main-menu.settings'|translate}}</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#!"><i class="mdi mdi-logout"></i>{{'main-menu.logout'|translate}}</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

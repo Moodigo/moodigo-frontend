@@ -1,4 +1,4 @@
-import {Component, ElementRef, Input} from "@angular/core";
+import {Component, Input} from "@angular/core";
 import {ILocation, IUser} from "../../../interfaces/app.interface";
 import {NgxAni} from "ngxani";
 
@@ -11,6 +11,7 @@ export class FeedItemComponent {
     @Input() type: string;
     @Input() imageUrl: string;
     @Input() userList: IUser[];
+    @Input() location: Location;
 
     constructor(private ngxAni: NgxAni) {
 

@@ -20,7 +20,7 @@ export class FeedItem {
         this.location = new Location(feedItemResponse.location);
         this.type = feedItemResponse.type;
         this.imageUrl = feedItemResponse.imageUrl;
-
+        this.userList = [];
         _.each(feedItemResponse.userList, (user: IUserResponse) => {
             this.userList.push(new User(user));
         });

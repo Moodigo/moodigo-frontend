@@ -22,7 +22,7 @@ export class CacheService implements ICacheService {
         this.dataService.loadFeed().subscribe((feedResponse: any) => {
             let feedTemp = [];
             _.each(feedResponse, (feedItem: IFeedItemResponse) => {
-                feedTemp.push(feedItem);
+                feedTemp.push(new FeedItem(feedItem));
             });
             this.setUserPlans(feedTemp);
         });

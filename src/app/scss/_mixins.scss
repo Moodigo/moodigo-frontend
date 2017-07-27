@@ -117,6 +117,13 @@
     -moz-user-select: $param;
     user-select: $param;
 }
+
+@mixin border-radius($param) {
+    -webkit-border-radius: $param;
+    -moz-border-radius: $param;
+    -ms-border-radius: $param;
+    border-radius: $param;
+}
 /** Mixins for secondary buttons
 * TODO should be removed when all buttons moved to bem styled classes
 */

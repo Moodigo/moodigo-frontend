@@ -11,5 +11,4 @@ $(function(){
             stopPropagation: false // Stops event propagation
         }
     );
-    console.log('asdads');
 });

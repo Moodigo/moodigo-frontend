@@ -1,0 +1,16 @@
+<div class="feed-item card horizontal" fxFlex="100">
+    <div class="card-type" [ngClass]="'card-type__'+type"><i class="white-text material-icons">cloud</i></div>
+    <div class="card-stacked">
+        <span class="card-title">{{header}}</span>
+        <span class="card-subtitle" fxLayout="row">
+            <i class="material-icons">location_on</i>{{location.text}}
+        </span>
+
+        <div class="card-action" fxFlexAlign="start">
+            <user-icon fxFlex *ngFor="let user of userList" [imageUrl]="user.imageUrl"></user-icon>
+        </div>
+    </div>
+    <div class="card-image">
+        <img [src]="imageUrl">
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div fxLayout="row" fxFill>
+    <div fxLayout="column"
+         fxFlex="20"
+         class="padding-content">
+        <side-filter fxFill></side-filter>
+    </div>
+
+    <div fxLayout="column"
+         fxFlex="60"
+         class="padding-content">
+
+        <new-event-field></new-event-field>
+
+        <feed-item *ngFor="let feedItem of feedItemList"
+                   header="{{feedItem.header}}"
+                   imageUrl="{{feedItem.imageUrl}}"
+                   [userList]="feedItem.userList"
+                   type="{{feedItem.type}}"></feed-item>
+    </div>
+
+    <div fxLayout="column"
+         fxFlex="20"
+         class="padding-content">
+        <side-suggests fxFill></side-suggests>
+    </div>
+</div>

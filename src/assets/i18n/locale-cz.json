@@ -1,6 +1,8 @@
 {
   "general.title": "Moodigo",
   "main-menu.profile": "Profil",
-  "main-menu.settings":"Nastavení",
-  "main-menu.logout":"Odhásit"
+  "main-menu.settings": "Nastavení",
+  "main-menu.logout": "Odhásit",
+  "feed.new-event.header": "Vytvoření nové události",
+  "feed.new-event.what-are-you-up-to": "Co se chystáte dělat?"
 }

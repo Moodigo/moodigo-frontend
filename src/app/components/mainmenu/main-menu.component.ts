@@ -2,9 +2,9 @@ import {Component} from "@angular/core";
 
 @Component({
 	selector: 'main-menu',
-	templateUrl: 'mainmenu.template.html'
+	templateUrl: 'main-menu.template.html'
 })
 
-export class MainmenuComponent {
+export class MainMenuComponent {
 
 }

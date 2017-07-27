@@ -1,0 +1,12 @@
+.padding{
+    &-content{
+        padding: $padding-content;
+    }
+    &-left{
+        padding-left: $padding-content;
+    }
+}
+
+.height-100 {
+    height: 100%;
+}

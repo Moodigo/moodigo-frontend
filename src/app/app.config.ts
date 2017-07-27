@@ -8,7 +8,6 @@ export interface IAppConfig {
 	routes:{
 		login: string;
 	};
-	mockApi: string;
 	api: {
 		url: string
 	};
@@ -20,12 +19,11 @@ export interface IAppConfig {
 }
 
 export const APP_CONFIG: IAppConfig = {
-	mockApi: '/assets/data/',
 	routes:{
 		login: '/login'
 	},
 	api: {
-		url: ''
+		url: 'http://localhost:9002/'
 	},
 	date: {
 		shortFormat: 'D.M',

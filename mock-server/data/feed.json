@@ -1,0 +1,48 @@
+[
+  {
+    "header": "Titulek Volejbal",
+    "location": {
+      "text": "Dejvice"
+    },
+    "userList": [
+      {
+        "firstname": "Adam",
+        "age": 29,
+        "gender": "male",
+        "status": "single",
+        "lastname": "Mrazek",
+        "nickname": "Xquick",
+        "imageUrl": "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-1/p24x24/19510243_10156386712686038_5559343650090816987_n.jpg?oh=cc4d2d7f3579feca79114e2aa70604ee&oe=5A08A94B"
+      },
+      {
+        "firstname": "Adam",
+        "age": 29,
+        "gender": "male",
+        "status": "single",
+        "lastname": "Mrazek",
+        "nickname": "Xquick",
+        "imageUrl": "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-1/p24x24/19510243_10156386712686038_5559343650090816987_n.jpg?oh=cc4d2d7f3579feca79114e2aa70604ee&oe=5A08A94B"
+      },
+      {
+        "firstname": "Adam",
+        "age": 29,
+        "gender": "male",
+        "status": "single",
+        "lastname": "Mrazek",
+        "nickname": "Xquick",
+        "imageUrl": "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-1/p24x24/19510243_10156386712686038_5559343650090816987_n.jpg?oh=cc4d2d7f3579feca79114e2aa70604ee&oe=5A08A94B"
+      }
+    ],
+    "type": "sport",
+    "imageUrl": "https://lorempixel.com/100/190/nature/6"
+  },
+  {
+    "header": "Seskok padákem v tandemu",
+    "location": {
+      "text": "Most"
+    },
+    "userList": [],
+    "type": "traveling",
+    "imageUrl": "https://lorempixel.com/100/190/nature/6"
+  }
+]

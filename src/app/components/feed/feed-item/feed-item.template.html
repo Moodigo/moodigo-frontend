@@ -6,8 +6,8 @@
             <i class="material-icons">location_on</i>{{location.text}}
         </span>
 
-        <div class="card-action" fxFlexAlign="start">
-            <user-icon fxFlex *ngFor="let user of userList" [imageUrl]="user.imageUrl"></user-icon>
+        <div class="card-action" fxFlexAlign="start" fxLayout="row">
+            <user-icon fxFlex fxLayout="column" *ngFor="let user of userList" [imageUrl]="user.imageUrl"></user-icon>
         </div>
     </div>
     <div class="card-image">

@@ -1,9 +1,26 @@
-.padding{
-    &-content{
+.padding {
+    &-content {
         padding: $padding-content;
     }
-    &-left{
+    &-left {
         padding-left: $padding-content;
+    }
+}
+
+.margin {
+    margin: $margin;
+
+    &-top {
+        margin-top: $margin;
+    }
+    &-right {
+        margin-right: $margin;
+    }
+    &-bottom {
+        margin-bottom: $margin;
+    }
+    &-left {
+        margin-left: $margin;
     }
 }
 

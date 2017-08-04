@@ -1,4 +1,29 @@
-<div fxFill
-     class="filter">
-    <div class="card" fxFill>Filter</div>
+<div class="card filter" fxFlex="100">
+    <div class="card-stacked">
+        <div class="card-title text-default"
+             (click)="openLocationModal()">
+            <i class="material-icons icon-primary">location_on</i>
+            <span>{{'Mestec Králové'}}</span>
+            <i class="material-icons">edit</i>
+        </div>
+
+        <div class="divider padding-bottom"></div>
+
+        <span class="card-title">
+             <i class="material-icons">accessibility</i>{{'side-filter.activities.header'|translate}}
+        </span>
+        <div class="card-content">
+            <tag (click)="toggleTagActive(tag.id)" *ngFor="let tag of filterTags" [name]="tag.name"></tag>
+        </div>
+    </div>
+</div>
+<div materialize="modal" [materializeActions]="modalActions" id="modal-location" class="modal">
+    <div class="modal-content">
+        <sebm-google-map (mapClick)="onClick()" [latitude]="lat" [longitude]="lng">
+            <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
+        </sebm-google-map>
+    </div>
+    <div class="modal-footer">
+        <a class="modal-action waves-effect btn-flat" (click)="closeLocationModal()">Agree</a>
+    </div>
 </div>

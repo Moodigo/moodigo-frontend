@@ -22,14 +22,12 @@ export class DataService {
 
     loadAvailableTags(): Observable<ITagResponse[]> {
         return this.http.get(APP_CONFIG.api.url + 'available-tags/').map((response: any) => {
-            console.log(response.json());
             return <ITagResponse[]> response.json();
         })
     }
 
     loadUserFilterTags(): Observable<ITagResponse[]> {
         return this.http.get(APP_CONFIG.api.url + 'users/' + this.authService.currentUser.id + '/tags/').map((response: any) => {
-            console.log(response);
             return <ITagResponse[]> response.json();
         });
     }

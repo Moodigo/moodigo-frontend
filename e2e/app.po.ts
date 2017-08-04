@@ -1,6 +1,6 @@
 import { browser, by, element } from 'protractor';
 
-export class MoodigoFrontendPage {
+export class ZoutlyFrontendPage {
   navigateTo() {
     return browser.get('/');
   }

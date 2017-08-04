@@ -1,10 +1,10 @@
-import { MoodigoFrontendPage } from './app.po';
+import { ZoutlyFrontendPage } from './app.po';
 
-describe('moodigo-frontend App', () => {
-  let page: MoodigoFrontendPage;
+describe('zoutly-frontend App', () => {
+  let page: ZoutlyFrontendPage;
 
   beforeEach(() => {
-    page = new MoodigoFrontendPage();
+    page = new ZoutlyFrontendPage();
   });
 
   it('should display message saying app works', () => {

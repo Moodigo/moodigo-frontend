@@ -25,7 +25,6 @@ export class SideFilterComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        console.log('map', this.map);
 
     }
 

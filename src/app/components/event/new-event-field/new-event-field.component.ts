@@ -1,18 +1,41 @@
-import {Component} from "@angular/core";
+import {Component, OnInit, ViewChild} from "@angular/core";
+import {HelperService} from "../../../services/helper.service";
+import {TagService} from "../../../services/entity-services/tag.service";
+import {AuthService} from "../../../services/auth.service";
+import {MaterializeDirective} from "angular2-materialize";
 
 @Component({
     selector: 'new-event-field',
     templateUrl: 'new-event-field.template.html'
 })
-export class NewEventFieldComponent {
-    private active = false;
+export class NewEventFieldComponent implements OnInit {
+    protected isActive = false;
+    autocompleteInit: any;
 
-    private activate() {
-        this.active = true;
-        Materialize.updateTextFields();
+    constructor(private tagService: TagService,
+                private helperService: HelperService,
+                private authService: AuthService) {
     }
 
-    private deactivate() {
-        this.active = false;
+    ngOnInit(): void {
+        this.tagService.allTagsAsArray.subscribe((availableTags: string[]) => {
+            let tagsAutocompleteFormat = this.helperService.stringArrayToMaterialAutocompleteFormat(availableTags);
+
+            this.autocompleteInit = {
+                autocompleteOptions: {
+                    data: tagsAutocompleteFormat,
+                    limit: 10,
+                    minLength: 1
+                }
+            };
+        });
+    }
+
+    private openNewEventWindow() {
+        this.isActive = true;
+    }
+
+    private closeNewEventWindow() {
+        this.isActive = false;
     }
 }

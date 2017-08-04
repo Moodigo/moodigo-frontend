@@ -24,3 +24,16 @@ app.get('/feed', (request, response) => {
 
     response.json(feedData);
 });
+
+app.get('/available-tags', (request, response) => {
+    response.status(200);
+    const feedData = dataProvider.getAvailableTags;
+
+    response.json(feedData);
+});
+
+app.get('/users/:userId/tags', (request, response) => {
+    let userId = request.params.userId;
+    const feedData = dataProvider.getAvailableTags;
+    response.json(feedData);
+});

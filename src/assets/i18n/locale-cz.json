@@ -1,8 +1,18 @@
 {
-  "general.title": "Moodigo",
+  "general.title": "Zoutly",
   "main-menu.profile": "Profil",
   "main-menu.settings": "Nastavení",
   "main-menu.logout": "Odhásit",
   "feed.new-event.header": "Vytvoření nové události",
-  "feed.new-event.what-are-you-up-to": "Co se chystáte dělat?"
+  "feed.new-event.what-are-you-up-to": "Co se chystáte dělat?",
+  "feed.new-event.submit": "Vytvořit událost",
+  "feed.new-event.form.tags.label": "Tagy popisující událost (Sport, Volejbal)",
+  "feed.new-event.form.location.label": "Místo události",
+  "feed.new-event.form.datetime.label": "Datum události",
+  "side-filter.location.header": "Kde",
+  "side-filter.location.add-location": "Přidat další",
+  "side-filter.activities.header": "Vaše aktivity",
+  "sugested.header": "Návrhy"
+
+
 }

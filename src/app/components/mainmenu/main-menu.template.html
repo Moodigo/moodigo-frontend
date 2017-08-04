@@ -1,20 +1,19 @@
 <nav>
     <div class="nav-wrapper container">
-        <div class="left height-100">
-            <div class="input-field main-menu__search input-field__static-icon">
+        <div class="left height-100" fxFlex fxLayout="row">
+            <div class="input-field main-menu__search input-field__static-icon"fxLayout="column" fxFlexAlign="center">
                 <i class="mdi mdi-magnify prefix text-gray"></i>
-                <input id="search" type="search" class="white lighten-3"/>
+                <input id="search" type="search" class="white lighten-3" />
             </div>
-
         </div>
         <div class="right height-100">
             <ul class="height-100">
                 <li>
                     <a class="waves-effect waves-light transparent wave">
                         <div class="chip">
-                            <img src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-1/p24x24/19510243_10156386712686038_5559343650090816987_n.jpg?oh=cc4d2d7f3579feca79114e2aa70604ee&oe=5A08A94B"
+                            <img [src]="authService.currentUser.imageUrl"
                                  alt="Contact Person">
-                            Adam
+                            {{authService.currentUser.firstname}}
                         </div>
                     </a>
                 </li>
@@ -25,14 +24,14 @@
                     </a>
                 </li>
                 <li>
-                    <a class="waves-effect waves-light dropdown-button tran3parent" data-activates='main-menu-dropdown'>
+                    <a materialize="dropdown" [materializeParams]="[dropdownSetting]"class="waves-effect waves-light dropdown-button transparent" data-activates='main-menu-dropdown'>
                         <i class="material-icons">menu</i>
                     </a>
                     <ul id='main-menu-dropdown' class='dropdown-content'>
-                        <li><a href="#!">{{'main-menu.profile'|translate}}</a></li>
-                        <li><a href="#!"><i class="material-icons">cloud</i>{{'main-menu.settings'|translate}}</a></li>
+                        <li><a>{{'main-menu.profile'|translate}}</a></li>
+                        <li><a><i class="material-icons">cloud</i>{{'main-menu.settings'|translate}}</a></li>
                         <li class="divider"></li>
-                        <li><a href="#!"><i class="mdi mdi-logout"></i>{{'main-menu.logout'|translate}}</a></li>
+                        <li><a (click)="logout()"><i class="mdi mdi-logout"></i>{{'main-menu.logout'|translate}}</a></li>
                     </ul>
                 </li>
             </ul>

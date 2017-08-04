@@ -2,3 +2,11 @@ html {
     min-height: 100%;
     background: #f4f4f4;
 }
+
+i.icon-primary {
+    color: $primary-color;
+}
+
+.text-default {
+    font-size: $font-default !important;
+}

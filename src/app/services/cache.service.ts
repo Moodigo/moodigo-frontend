@@ -1,17 +1,13 @@
 import {DataService} from "./data.service";
 import {Inject} from "@angular/core";
 
-import * as _ from 'underscore';
-import {FeedItem} from "../dao/feed-item.dao";
-import {response} from "../interfaces/response.interface";
-import IFeedItemResponse = response.IFeedItemResponse;
+import * as _ from "underscore";
+import {FeedItem} from "../entity/feed-item";
 import {ReplaySubject} from "rxjs/ReplaySubject";
+import {IFeedItemResponse} from "../interfaces/response.interface";
 
-interface ICacheService {
 
-}
-
-export class CacheService implements ICacheService {
+export class CacheService {
     private _feed: ReplaySubject<FeedItem[]>;
 
     constructor(@Inject(DataService) private dataService: DataService) {
@@ -24,7 +20,7 @@ export class CacheService implements ICacheService {
             _.each(feedResponse, (feedItem: IFeedItemResponse) => {
                 feedTemp.push(new FeedItem(feedItem));
             });
-            this.setUserPlans(feedTemp);
+            this.setFeed(feedTemp);
         });
     }
 
@@ -32,7 +28,7 @@ export class CacheService implements ICacheService {
         return this._feed;
     }
 
-    setUserPlans(value: FeedItem[]) {
+    setFeed(value: FeedItem[]) {
 
         this._feed.next(value);
     }

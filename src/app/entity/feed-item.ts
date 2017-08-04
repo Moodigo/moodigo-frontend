@@ -1,10 +1,8 @@
-import {response} from "../interfaces/response.interface";
-import IFeedItemResponse = response.IFeedItemResponse;
-import IUserResponse = response.IUserResponse;
 
 import * as _ from 'underscore';
-import {User} from "./user.dao";
-import {Location} from "./location.dao";
+import {User} from "./user";
+import {Location} from "./location";
+import {IFeedItemResponse, IUserResponse} from "../interfaces/response.interface";
 
 export class FeedItem {
     id: number;

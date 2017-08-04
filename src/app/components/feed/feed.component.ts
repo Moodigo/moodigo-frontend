@@ -1,6 +1,6 @@
 import {Component, OnInit} from "@angular/core";
 import {CacheService} from "../../services/cache.service";
-import {FeedItem} from "../../dao/feed-item.dao";
+import {FeedItem} from "../../entity/feed-item";
 
 @Component({
     selector: 'feed',
@@ -21,6 +21,6 @@ export class FeedComponent implements OnInit {
     ngOnInit() {
         this.cacheService.feed.subscribe((feed: FeedItem[]) => {
             this.feedItemList = feed;
-        })
+        });
     }
 }

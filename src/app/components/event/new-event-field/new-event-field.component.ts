@@ -1,8 +1,7 @@
-import {Component, OnInit, ViewChild} from "@angular/core";
+import {Component, OnInit} from "@angular/core";
 import {HelperService} from "../../../services/helper.service";
 import {TagService} from "../../../services/entity-services/tag.service";
 import {AuthService} from "../../../services/auth.service";
-import {MaterializeDirective} from "angular2-materialize";
 
 @Component({
     selector: 'new-event-field',

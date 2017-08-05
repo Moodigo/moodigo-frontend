@@ -17,15 +17,18 @@ export class SideFilterComponent implements OnInit {
     lat: number = 51.678418;
     lng: number = 7.809007;
     modalActions: EventEmitter<MaterializeAction> = new EventEmitter();
+    pushpinSetting: any;
 
     constructor(private filterService: FilterService) {
-        filterService.filterTags.subscribe((filterTags: Tag[]) => {
-            this.filterTags = filterTags;
-        });
+
     }
 
     ngOnInit(): void {
+        this.pushpinSetting = {offset: 45};
 
+        this.filterService.filterTags.subscribe((filterTags: Tag[]) => {
+            this.filterTags = filterTags;
+        });
     }
 
     openLocationModal() {

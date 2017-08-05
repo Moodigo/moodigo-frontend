@@ -1,7 +1,11 @@
-<div fxFill
-     class="side-suggested">
-    <div class="card" fxFill>
-        <div class="card-title">{{'sugested.header'|translate}}</div>
-        <div class="card-content"></div>
+<div class="pushpin-width-fix padding-content"
+     [materializeParams]="[pushpinSetting]"
+     materialize="pushpin">
+    <div fxFill
+         class="side-suggested">
+        <div class="card">
+            <div class="card-title">{{'sugested.header'|translate}}</div>
+            <div class="card-content"></div>
+        </div>
     </div>
 </div>

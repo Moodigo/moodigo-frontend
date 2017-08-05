@@ -1,0 +1,22 @@
+[
+  {
+    "name": "volejbal",
+    "type": "sport"
+  },
+  {
+    "name": "basketbal",
+    "type": "sport"
+  },
+  {
+    "name": "procházka",
+    "type": "tourism"
+  },
+  {
+    "name": "rybaření",
+    "type": "sport"
+  },
+  {
+    "name": "slackline",
+    "type": "sport"
+  }
+]

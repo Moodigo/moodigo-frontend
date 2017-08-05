@@ -1,8 +1,8 @@
-<div fxLayout="row" fxFill>
+<div #feed fxLayout="row">
     <div fxLayout="column"
          fxFlex="20"
-         class="padding-content">
-        <side-filter fxFill class="side-filter"></side-filter>
+         class="side-left">
+        <side-filter class="side-filter pushpin-width-fix"></side-filter>
     </div>
 
     <div fxLayout="column"
@@ -11,17 +11,17 @@
 
         <new-event-field></new-event-field>
 
-        <feed-item *ngFor="let feedItem of feedItemList"
-                   header="{{feedItem.header}}"
-                   imageUrl="{{feedItem.imageUrl}}"
-                   [location]="feedItem.location"
-                   [userList]="feedItem.userList"
-                   type="{{feedItem.type}}"></feed-item>
+        <feed-item *ngFor="let feedItem of feedItemList;let i = index;"
+                   fxLayout="column"
+                   [feedItem]="feedItem"
+                   [ngClass]="{
+                   'first-of-date':i==0 || feedItemList[i].date !== feedItemList[i-1].date,
+                   'last-of-date':i==feedItemList.length-1 || feedItemList[i].date !== feedItemList[i+1].date}"
+                   [displayDate]="i==0 || feedItemList[i].date !== feedItemList[i-1].date"></feed-item>
     </div>
 
     <div fxLayout="column"
-         fxFlex="20"
-         class="padding-content">
+         fxFlex="20">
         <side-suggests fxFill></side-suggests>
     </div>
 </div>

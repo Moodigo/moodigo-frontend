@@ -2,6 +2,7 @@
      [ngClass]="{'active': isActive}"
      fxFlex="100"
      (click)="openNewEventWindow()">
+
     <div class="card-stacked">
         <span class="card-title">{{'feed.new-event.header'|translate}}</span>
         <span class="card-subtitle" fxLayout="row" fxFlexAlign="start center">
@@ -27,7 +28,7 @@
                 </div>
                 <div class="input-field">
                     <i class="material-icons prefix">access_time</i>
-                    <input type="text" id="new-event-datetime" class="timepicker">
+                    <input materialize="pickadate" type="text" id="new-event-datetime" class="timepicker">
                     <label for="new-event-datetime">{{'feed.new-event.form.datetime.label'|translate}}</label>
                 </div>
                 <button class="btn right">{{'feed.new-event.submit'| translate}}</button>

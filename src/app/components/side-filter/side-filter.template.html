@@ -1,19 +1,24 @@
-<div class="card filter" fxFlex="100">
-    <div class="card-stacked">
-        <div class="card-title text-default"
-             (click)="openLocationModal()">
-            <i class="material-icons icon-primary">location_on</i>
-            <span>{{'Mestec Králové'}}</span>
-            <i class="material-icons">edit</i>
-        </div>
+<div class="pushpin-width-fix padding-content"
+     [materializeParams]="[pushpinSetting]"
+     materialize="pushpin">
 
-        <div class="divider padding-bottom"></div>
+    <div class="card filter" fxFlex="100">
+        <div class="card-stacked">
+            <div class="card-title text-default"
+                 (click)="openLocationModal()">
+                <i class="material-icons icon-primary">location_on</i>
+                <span>{{'Mestec Králové'}}</span>
+                <i class="material-icons">edit</i>
+            </div>
 
-        <span class="card-title">
+            <div class="divider padding-bottom"></div>
+
+            <span class="card-title">
              <i class="material-icons">accessibility</i>{{'side-filter.activities.header'|translate}}
         </span>
-        <div class="card-content">
-            <tag (click)="toggleTagActive(tag.id)" *ngFor="let tag of filterTags" [name]="tag.name"></tag>
+            <div class="card-content">
+                <tag (click)="toggleTagActive(tag.id)" *ngFor="let tag of filterTags" [name]="tag.name"></tag>
+            </div>
         </div>
     </div>
 </div>

@@ -39,7 +39,6 @@ export function HttpLoaderFactory(http: Http) {
 }
 
 const routes: Route[] = [
-
     {
         path: 'login',
         component: LoginComponent

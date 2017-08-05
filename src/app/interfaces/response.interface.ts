@@ -1,6 +1,8 @@
 export interface IFeedItemResponse {
     id: number;
     header: string;
+    date: string;
+    time: string;
     location: ILocationResponse;
     type: string;
     imageUrl: string;

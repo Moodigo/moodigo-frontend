@@ -1,6 +1,9 @@
 [
   {
+    "id": 0,
     "header": "Titulek Volejbal",
+    "date": "12-09-2017",
+    "time": "09:00",
     "location": {
       "text": "Dejvice"
     },
@@ -34,15 +37,172 @@
       }
     ],
     "type": "sport",
-    "imageUrl": "https://lorempixel.com/100/190/nature/6"
+    "imageUrl": "https://lorempixel.com/190/190/nature/8"
   },
   {
+    "id": 1,
     "header": "Seskok padákem v tandemu",
+    "date": "12-09-2017",
+    "time": "10:30",
+    "location": {
+      "text": "Praha - Anděl"
+    },
+    "userList": [],
+    "type": "traveling",
+    "imageUrl": "https://lorempixel.com/190/190/nature/7"
+  },
+  {
+    "id": 2,
+    "header": "Seskok padákem v tandemu",
+    "date": "12-09-2017",
+    "time": "10:30",
+    "location": {
+      "text": "Hradec Králové"
+    },
+    "userList": [
+      {
+        "firstname": "Adam",
+        "age": 29,
+        "gender": "male",
+        "status": "single",
+        "lastname": "Mrazek",
+        "nickname": "Xquick",
+        "imageUrl": "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-1/p24x24/19510243_10156386712686038_5559343650090816987_n.jpg?oh=cc4d2d7f3579feca79114e2aa70604ee&oe=5A08A94B"
+      }
+    ],
+    "type": "traveling",
+    "imageUrl": "https://lorempixel.com/190/190/nature/5"
+  },
+  {
+    "id": 3,
+    "header": "Seskok padákem v tandemu",
+    "date": "12-09-2017",
+    "time": "18:00",
     "location": {
       "text": "Most"
     },
     "userList": [],
+    "type": "hangout",
+    "imageUrl": "https://lorempixel.com/190/190/nature/4"
+  },
+  {
+    "id": 4,
+    "header": "Seskok padákem v tandemu",
+    "date": "13-09-2017",
+    "time": "15:00",
+    "location": {
+      "text": "Městec Králové"
+    },
+    "userList": [],
+    "type": "sport",
+    "imageUrl": "https://lorempixel.com/190/190/nature/3"
+  },
+  {
+    "id": 5,
+    "header": "Seskok padákem v tandemu",
+    "date": "13-09-2017",
+    "time": "19:15",
+    "location": {
+      "text": "Praha - Dejvice"
+    },
+    "userList": [],
+    "type": "hangout",
+    "imageUrl": "https://lorempixel.com/190/190/nature/2"
+  },
+  {
+    "id": 6,
+    "header": "Seskok padákem v tandemu",
+    "date": "14-09-2017",
+    "time": "14:45",
+    "location": {
+      "text": "Písek"
+    },
+    "userList": [],
     "type": "traveling",
-    "imageUrl": "https://lorempixel.com/100/190/nature/6"
+    "imageUrl": "https://lorempixel.com/190/190/nature/1"
+  },
+  {
+    "id": 7,
+    "header": "Seskok padákem v tandemu",
+    "date": "18-09-2017",
+    "time": "11:10",
+    "location": {
+      "text": "Městec Králové"
+    },
+    "userList": [],
+    "type": "traveling",
+    "imageUrl": "https://lorempixel.com/190/190/nature/6"
+  },
+  {
+    "id": 8,
+    "header": "Seskok padákem v tandemu",
+    "date": "18-09-2017",
+    "time": "11:10",
+    "location": {
+      "text": "Městec Králové"
+    },
+    "userList": [],
+    "type": "traveling",
+    "imageUrl": "https://lorempixel.com/190/190/nature/6"
+  },
+  {
+    "id": 9,
+    "header": "Seskok padákem v tandemu",
+    "date": "18-09-2017",
+    "time": "11:10",
+    "location": {
+      "text": "Městec Králové"
+    },
+    "userList": [],
+    "type": "traveling",
+    "imageUrl": "https://lorempixel.com/190/190/nature/6"
+  },
+  {
+    "id": 10,
+    "header": "Seskok padákem v tandemu",
+    "date": "18-09-2017",
+    "time": "11:10",
+    "location": {
+      "text": "Městec Králové"
+    },
+    "userList": [],
+    "type": "traveling",
+    "imageUrl": "https://lorempixel.com/190/190/nature/6"
+  },
+  {
+    "id": 11,
+    "header": "Seskok padákem v tandemu",
+    "date": "18-09-2017",
+    "time": "11:10",
+    "location": {
+      "text": "Městec Králové"
+    },
+    "userList": [],
+    "type": "traveling",
+    "imageUrl": "https://lorempixel.com/190/190/nature/6"
+  },
+  {
+    "id": 12,
+    "header": "Seskok padákem v tandemu",
+    "date": "18-09-2017",
+    "time": "11:10",
+    "location": {
+      "text": "Městec Králové"
+    },
+    "userList": [],
+    "type": "traveling",
+    "imageUrl": "https://lorempixel.com/190/190/nature/6"
+  },
+  {
+    "id": 13,
+    "header": "Seskok padákem v tandemu",
+    "date": "18-09-2017",
+    "time": "11:10",
+    "location": {
+      "text": "Městec Králové"
+    },
+    "userList": [],
+    "type": "traveling",
+    "imageUrl": "https://lorempixel.com/190/190/nature/6"
   }
 ]

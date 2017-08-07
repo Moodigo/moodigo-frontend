@@ -9,10 +9,10 @@
   "feed.new-event.form.tags.label": "Tagy popisující událost (Sport, Volejbal)",
   "feed.new-event.form.location.label": "Místo události",
   "feed.new-event.form.datetime.label": "Datum události",
+  "feed.event.modal.close": "Zavřít",
   "side-filter.location.header": "Kde",
   "side-filter.location.add-location": "Přidat další",
   "side-filter.activities.header": "Vaše aktivity",
+  "side-filter.location.modal.close": "Zavřít",
   "sugested.header": "Návrhy"
-
-
 }

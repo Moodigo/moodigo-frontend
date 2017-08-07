@@ -1,7 +1,6 @@
 <div class="feed-item card horizontal new-event clearfix"
      [ngClass]="{'active': isActive}"
-     fxFlex="100"
-     (click)="openNewEventWindow()">
+     fxFlex="100">
 
     <div class="card-stacked">
         <span class="card-title">{{'feed.new-event.header'|translate}}</span>
@@ -10,7 +9,12 @@
                     fxFlexAlign="center"
                     className="medium"
                     [imageUrl]="authService.currentUser.imageUrl"></user-icon>
-            <span class="padding-left" fxFlexAlign="center">{{'feed.new-event.what-are-you-up-to' | translate}}</span>
+            <input materialize="characterCounter" class="padding-left margin-left no-border" fxFlexAlign="center"
+                   id="what-are-you-up-to"
+                   (focus)="openNewEventWindow()"
+                   [attr.data-length]="titleLengthLimit"
+                   [placeholder]="'feed.new-event.what-are-you-up-to' | translate"/>
+            <label for="what-are-you-up-to"></label>
         </span>
 
         <div class="card-content" *ngIf="!!autocompleteInit?.autocompleteOptions">

@@ -23,6 +23,7 @@ export interface IFeedItem {
 export interface ITag {
     id: number;
     name: string;
+    type?: string;
 }
 
 export interface IFacebookUserFields {

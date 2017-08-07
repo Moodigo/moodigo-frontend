@@ -1,9 +1,9 @@
 .padding {
     &-content {
-        padding: $padding-content;
+        padding: $padding-content !important;
     }
     &-left {
-        padding-left: $padding-content;
+        padding-left: $padding-content !important;
     }
 }
 
@@ -34,4 +34,14 @@
 .pushpin-width-fix {
     max-width: inherit !important;
     min-width: inherit !important;
+}
+
+input {
+    &,
+    &:focus {
+        &.no-border {
+            border: none !important;
+            box-shadow: none !important;
+        }
+    }
 }

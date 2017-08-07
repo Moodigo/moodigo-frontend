@@ -10,7 +10,9 @@
 
 <div class="feed-item" fxFlex="100" fxLayout="row">
     <span class="feed-item-time" fxFlex fxFlexAlign="center">{{feedItem.time}}</span>
-    <div class="card horizontal" fxFlex="100">
+    <div class="card horizontal"
+         (click)="openEventDetail()"
+         fxFlex="100">
         <div class="card-type" [ngClass]="'card-type__'+feedItem.type"><i class="white-text material-icons">cloud</i>
         </div>
         <div class="card-stacked">
@@ -25,6 +27,24 @@
         </div>
         <div class="card-image">
             <img [src]="feedItem.imageUrl">
+        </div>
+    </div>
+    <div materialize="modal" [materializeActions]="modalActions" id="modal-event" class="modal">
+        <div class="modal-content" *ngIf="isEventDetailOpen">
+            <div fxLayout="column" fxFill>
+                <div class="event-header" fxLayout="row" fxFlex="100">
+                    <img [src]="feedItem.imageUrl"/>
+                    <h3>{{feedItem.header}}</h3>
+                </div>
+                <div class="event-users" fxLayout="row" fxLayoutAlign="start" fxFlex="100">
+                    <user-icon fxFlex fxLayout="column" fxFlexAlign="start"
+                               *ngFor="let user of feedItem.userList"
+                               [imageUrl]="user.imageUrl"></user-icon>
+                </div>
+            </div>
+            <div class="modal-footer" fxLayout="row">
+                <a class="modal-action waves-effect btn-flat" (click)="closeEventDetail()">{{'feed.event.modal.close'|translate}}</a>
+            </div>
         </div>
     </div>
 </div>

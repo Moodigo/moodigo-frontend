@@ -12,10 +12,9 @@ export interface IFeedItemResponse {
 export interface IUserResponse {
     id: string;
     firstname: string;
+    middlename: string;
     lastname: string;
-    nickname: string;
     age: number;
-    gender: string;
     imageUrl: string;
 }
 
@@ -23,7 +22,20 @@ export interface ILocationResponse {
     text: string;
 }
 
+interface ITagResponsePayload extends Response {
+    payload: ITagResponse[];
+}
+
 export interface ITagResponse {
     id: number;
     name: string;
+}
+
+export interface Response {
+    payload: any;
+    status?: {
+        type: string;
+        code: number;
+        message: string;
+    }
 }

@@ -3,6 +3,10 @@ html {
     background: #f4f4f4;
 }
 
+body {
+    overflow-y: scroll !important;
+}
+
 i.icon-primary {
     color: $primary-color;
 }

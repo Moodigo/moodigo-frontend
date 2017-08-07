@@ -1,33 +1,7 @@
-import {InjectionToken} from "@angular/core";
-
-export interface IAppConfig {
-    facebook: {
-        version: string;
-        key: string;
-        fields: string[];
-        scope: string;
-    }
-    googleMaps: {
-        key: string;
-    };
-    snackBar: {
-        duration: number;
-        position: string;
-    }
-    routes: {
-        login: string;
-    };
-    api: {
-        url: string
-    };
-    date: {
-        shortFormat: string;
-        mediumFormat: string;
-        longFormat: string;
-    };
-}
-
-export const APP_CONFIG: IAppConfig = {
+export const APP_CONFIG = {
+    event: {
+        titleCharLimit: 50
+    },
     facebook: {
         version: 'v2.10',
         key: '1615469685172560',
@@ -51,10 +25,12 @@ export const APP_CONFIG: IAppConfig = {
         mediumFormat: 'D.M.YY',
         longFormat: 'D.M.YYYY'
     },
+    time: {
+        shortFormat: 'H:m',
+        mediumFormat: 'HH:mm'
+    },
     snackBar: {
         duration: 5000,
         position: ''
     }
 };
-
-export let IAppConfig = new InjectionToken<IAppConfig>('app.config');

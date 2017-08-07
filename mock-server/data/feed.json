@@ -9,30 +9,27 @@
     },
     "userList": [
       {
+        "id": 1,
         "firstname": "Adam",
         "age": 29,
-        "gender": "male",
-        "status": "single",
+        "middlename": "",
         "lastname": "Mrazek",
-        "nickname": "Xquick",
         "imageUrl": "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-1/p24x24/19510243_10156386712686038_5559343650090816987_n.jpg?oh=cc4d2d7f3579feca79114e2aa70604ee&oe=5A08A94B"
       },
       {
+        "id": 1,
         "firstname": "Adam",
         "age": 29,
-        "gender": "male",
-        "status": "single",
+        "middlename": "",
         "lastname": "Mrazek",
-        "nickname": "Xquick",
         "imageUrl": "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-1/p24x24/19510243_10156386712686038_5559343650090816987_n.jpg?oh=cc4d2d7f3579feca79114e2aa70604ee&oe=5A08A94B"
       },
       {
+        "id": 1,
         "firstname": "Adam",
         "age": 29,
-        "gender": "male",
-        "status": "single",
+        "middlename": "",
         "lastname": "Mrazek",
-        "nickname": "Xquick",
         "imageUrl": "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-1/p24x24/19510243_10156386712686038_5559343650090816987_n.jpg?oh=cc4d2d7f3579feca79114e2aa70604ee&oe=5A08A94B"
       }
     ],
@@ -61,12 +58,11 @@
     },
     "userList": [
       {
+        "id": 1,
         "firstname": "Adam",
         "age": 29,
-        "gender": "male",
-        "status": "single",
+        "middlename": "",
         "lastname": "Mrazek",
-        "nickname": "Xquick",
         "imageUrl": "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-1/p24x24/19510243_10156386712686038_5559343650090816987_n.jpg?oh=cc4d2d7f3579feca79114e2aa70604ee&oe=5A08A94B"
       }
     ],

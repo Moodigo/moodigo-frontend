@@ -4,6 +4,7 @@ export class User {
     id: string;
     firstname: string;
     lastname: string;
+    middlename: string;
     nickname: string;
     age: number;
     gender: string;
@@ -12,10 +13,9 @@ export class User {
     constructor(userConstructData: IUserResponse) {
         this.id = userConstructData.id;
         this.firstname = userConstructData.firstname;
+        this.middlename = userConstructData.middlename;
         this.lastname = userConstructData.lastname;
-        this.nickname = userConstructData.nickname;
         this.age = userConstructData.age;
-        this.gender = userConstructData.gender;
         this.imageUrl = userConstructData.imageUrl;
     }
 }

@@ -2,6 +2,7 @@ import {Component, OnInit} from "@angular/core";
 import {HelperService} from "../../../services/helper.service";
 import {TagService} from "../../../services/entity-services/tag.service";
 import {AuthService} from "../../../services/auth.service";
+import {APP_CONFIG} from "../../../app.config";
 
 @Component({
     selector: 'new-event-field',
@@ -10,6 +11,7 @@ import {AuthService} from "../../../services/auth.service";
 export class NewEventFieldComponent implements OnInit {
     protected isActive = false;
     autocompleteInit: any;
+    titleLengthLimit: number;
 
     constructor(private tagService: TagService,
                 private helperService: HelperService,
@@ -17,6 +19,7 @@ export class NewEventFieldComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        this.titleLengthLimit = APP_CONFIG.event.titleCharLimit;
         this.tagService.allTagsAsArray.subscribe((availableTags: string[]) => {
             let tagsAutocompleteFormat = this.helperService.stringArrayToMaterialAutocompleteFormat(availableTags);
 

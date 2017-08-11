@@ -222,8 +222,8 @@ body {
                     &__sport {
                         background-color: $sport-color;
                     }
-                    &__traveling {
-                        background-color: $traveling-color;
+                    &__travel {
+                        background-color: $travel-color;
                     }
                     &__hangout {
                         background-color: $hangout-color;
@@ -295,6 +295,10 @@ body {
             &__small-padding {
                 padding: 5px 24px;
             }
+
+            &__no-padding {
+                padding: 0;
+            }
         }
     }
 
@@ -340,6 +344,26 @@ body {
                 color: $primary-color;
             }
         }
+
+        &__content {
+            padding: 10px;
+        }
+        &__header {
+            margin-top: 10px;
+            padding: 5px 10px;
+
+            h5 {
+                i {
+                    margin-right: 5px;
+                }
+                margin: 0;
+                font-size: $font-mlarge;
+                text-transform: capitalize;
+                color: white;
+            }
+        }
+        &__tagTypeContainer {
+        }
     }
 
     .tag {
@@ -377,6 +401,15 @@ body {
 
     .side-left {
         min-height: 400px;
+    }
+
+    .type {
+        &--sport {
+            background-color: $sport-color;
+        }
+        &--travel {
+            background-color: $travel-color;
+        }
     }
 }
 

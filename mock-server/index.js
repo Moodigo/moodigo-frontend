@@ -34,6 +34,6 @@ app.get('/available-tags', (request, response) => {
 
 app.get('/users/:userId/tags', (request, response) => {
     let userId = request.params.userId;
-    const feedData = dataProvider.getAvailableTags;
+    const feedData = dataProvider.userTags;
     response.json(feedData);
 });

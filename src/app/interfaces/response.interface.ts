@@ -22,16 +22,17 @@ export interface ILocationResponse {
     text: string;
 }
 
-interface ITagResponsePayload extends Response {
+interface ITagResponsePayload extends IResponse {
     payload: ITagResponse[];
 }
 
 export interface ITagResponse {
     id: number;
     name: string;
+    type: string;
 }
 
-export interface Response {
+export interface IResponse {
     payload: any;
     status?: {
         type: string;

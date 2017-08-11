@@ -1,8 +1,8 @@
-import {Component, EventEmitter, OnInit, ViewChild, ViewChildren} from "@angular/core";
-import {FilterService} from "../../services/entity-services/filter.service";
-import {Tag} from "../../entity/tag";
-import {MaterializeAction} from "angular2-materialize";
-import {SebmGoogleMap, SebmGoogleMapMarker} from "angular2-google-maps/core";
+import {Component, EventEmitter, OnInit, ViewChild, ViewChildren} from '@angular/core';
+import {FilterService} from '../../services/entity-services/filter.service';
+import {MaterializeAction} from 'angular2-materialize';
+import {SebmGoogleMap, SebmGoogleMapMarker} from 'angular2-google-maps/core';
+import {ITagCategory} from '../../interfaces/app.interface';
 
 @Component({
     selector: 'side-filter',
@@ -13,9 +13,9 @@ export class SideFilterComponent implements OnInit {
     @ViewChild(SebmGoogleMap) private map: SebmGoogleMap;
     @ViewChildren(SebmGoogleMapMarker) private markers: Array<SebmGoogleMapMarker>;
 
-    filterTags: Tag[];
-    lat: number = 51.678418;
-    lng: number = 7.809007;
+    filterTags: ITagCategory[];
+    lat: number;
+    lng: number;
     modalActions: EventEmitter<MaterializeAction> = new EventEmitter();
     pushpinSetting: any;
 
@@ -24,23 +24,25 @@ export class SideFilterComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.pushpinSetting = {offset: 45};
+        this.lat = 51.678418;
+        this.lng = 7.809007;
+        this.pushpinSetting = { offset: 45 };
 
-        this.filterService.filterTags.subscribe((filterTags: Tag[]) => {
-            this.filterTags = filterTags;
+        this.filterService.getAllTagsGroupedByType().subscribe((tagCategoryList: ITagCategory[]) => {
+            this.filterTags = tagCategoryList;
         });
     }
 
     openLocationModal() {
-        this.modalActions.emit({action: 'modal', params: ['open']});
+        this.modalActions.emit({ action: 'modal', params: ['open'] });
         this.map.triggerResize();
     }
 
     closeLocationModal() {
-        this.modalActions.emit({action: 'modal', params: ['close']});
+        this.modalActions.emit({ action: 'modal', params: ['close'] });
     }
 
-    onClick() {
+    onMapClick() {
         //TODO: clicking on map needs to add marker
     }
 

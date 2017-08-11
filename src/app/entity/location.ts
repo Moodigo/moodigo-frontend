@@ -1,5 +1,4 @@
-
-import {ILocationResponse} from "../interfaces/response.interface";
+import {ILocationResponse} from '../interfaces/response.interface';
 
 export class Location {
     text: string;

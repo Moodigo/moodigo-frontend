@@ -1,9 +1,9 @@
 import * as _ from 'underscore';
-import {User} from "./user";
-import {Location} from "./location";
-import {IFeedItemResponse, IUserResponse} from "../interfaces/response.interface";
+import {User} from './user';
+import {Location} from './location';
+import {IFeedItemResponse, IUserResponse} from '../interfaces/response.interface';
 import * as moment from 'moment';
-import {APP_CONFIG} from "../app.config";
+import {APP_CONFIG} from '../app.config';
 
 export class FeedItem {
     id: number;

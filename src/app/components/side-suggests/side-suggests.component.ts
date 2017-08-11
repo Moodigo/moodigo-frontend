@@ -1,5 +1,5 @@
-import {Component, OnInit} from "@angular/core";
-import {CacheService} from "../../services/cache.service";
+import {Component, OnInit} from '@angular/core';
+import {CacheService} from '../../services/cache.service';
 
 @Component({
     selector: 'side-suggests',

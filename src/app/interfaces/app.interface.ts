@@ -26,6 +26,10 @@ export interface ITag {
     type?: string;
 }
 
+export interface ITagCategory {
+    [key: string]: ITag[];
+}
+
 export interface IFacebookUserFields {
     email: string;
     first_name: string;
@@ -46,4 +50,41 @@ export interface IFacebookUserFields {
     timezone: string;
     website: string;
     work: string;
+}
+
+export class ActivityTypes {
+    static SPORT = 'sport';
+    static TRAVEL = 'travel';
+    static LEARN = 'learn';
+    static PARTY = 'party';
+    static DATE = 'date';
+    static HANGOUT = 'hangout';
+
+    static getActivityIcon(activityType: string): string {
+        let iconName: string;
+
+        switch (activityType) {
+            case ActivityTypes.LEARN:
+                iconName = 'lightbulb_outline';
+                break;
+            case ActivityTypes.PARTY:
+                iconName = '';
+                break;
+            case ActivityTypes.SPORT:
+                iconName = 'rowing';
+                break;
+            case ActivityTypes.TRAVEL:
+                iconName = 'flight_takeoff';
+                break;
+            case ActivityTypes.DATE:
+                iconName = 'favorite';
+                break;
+            case ActivityTypes.HANGOUT:
+                iconName = 'theaters';
+                break;
+            default:
+                iconName = '';
+        }
+        return iconName;
+    }
 }

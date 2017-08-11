@@ -1,7 +1,7 @@
-import {Component} from "@angular/core";
-import {Router} from "@angular/router";
-import {APP_CONFIG} from "../../app.config";
-import {AuthService} from "../../services/auth.service";
+import {Component} from '@angular/core';
+import {Router} from '@angular/router';
+import {APP_CONFIG} from '../../app.config';
+import {AuthService} from '../../services/auth.service';
 
 @Component({
     selector: 'main-menu',
@@ -14,6 +14,7 @@ export class MainMenuComponent {
 
     constructor(protected authService: AuthService,
                 private router: Router) {
+
         this.dropdownSetting = {
             inDuration: 300,
             outDuration: 225,
@@ -23,7 +24,8 @@ export class MainMenuComponent {
             belowOrigin: true, // Displays dropdown below the button
             alignment: 'left', // Displays dropdown with edge aligned to the left of button
             stopPropagation: false // Stops event propagation
-        }
+        };
+
     }
 
     logout() {

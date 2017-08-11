@@ -1,10 +1,10 @@
-import {DataService} from "./data.service";
-import {Inject} from "@angular/core";
+import {DataService} from './data.service';
+import {Inject} from '@angular/core';
 
-import * as _ from "underscore";
-import {FeedItem} from "../entity/feed-item";
-import {ReplaySubject} from "rxjs/ReplaySubject";
-import {IFeedItemResponse} from "../interfaces/response.interface";
+import * as _ from 'underscore';
+import {FeedItem} from '../entity/feed-item';
+import {ReplaySubject} from 'rxjs/ReplaySubject';
+import {IFeedItemResponse} from '../interfaces/response.interface';
 
 
 export class CacheService {
@@ -16,7 +16,7 @@ export class CacheService {
 
     cacheFeed(): void {
         this.dataService.loadFeed().subscribe((feedResponse: any) => {
-            let feedTemp = [];
+            const feedTemp = [];
             _.each(feedResponse, (feedItem: IFeedItemResponse) => {
                 feedTemp.push(new FeedItem(feedItem));
             });

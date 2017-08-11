@@ -13,7 +13,8 @@
     <div class="card horizontal"
          (click)="openEventDetail()"
          fxFlex="100">
-        <div class="card-type" [ngClass]="'card-type__'+feedItem.type"><i class="white-text material-icons">cloud</i>
+        <div class="card-type" [ngClass]="'card-type__' + feedItem.type">
+            <activity-icon className="white-text" [activityType]="feedItem.type"></activity-icon>
         </div>
         <div class="card-stacked">
             <span class="card-title">{{feedItem.header}}</span>

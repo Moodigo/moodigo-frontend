@@ -1,10 +1,10 @@
-import {Tag} from "../../entity/tag";
-import {ReplaySubject} from "rxjs/ReplaySubject";
-import {DataService} from "../data.service";
-import {Inject} from "@angular/core";
-import {ITagResponse} from "../../interfaces/response.interface";
-import {ITag} from "../../interfaces/app.interface";
-import * as _ from "underscore";
+import {Tag} from '../../entity/tag';
+import {ReplaySubject} from 'rxjs/ReplaySubject';
+import {DataService} from '../data.service';
+import {Inject} from '@angular/core';
+import {ITagResponse} from '../../interfaces/response.interface';
+import {ITag} from '../../interfaces/app.interface';
+import * as _ from 'underscore';
 
 export class TagService {
 
@@ -19,7 +19,7 @@ export class TagService {
 
     cacheAvailableTags(): void {
         this.dataService.loadAvailableTags().subscribe((availableTagsResponse: ITagResponse[]) => {
-            let availableTagsTemp: ITag[] = [];
+            const availableTagsTemp: Tag[] = [];
             _.each(availableTagsResponse, (availableTagResponse: ITagResponse) => {
                 availableTagsTemp.push(new Tag(availableTagResponse));
             });
@@ -28,7 +28,7 @@ export class TagService {
     }
 
     get allTagsAsArray(): ReplaySubject<string[]> {
-        let returnTagArray: string[] = [];
+        const returnTagArray: string[] = [];
 
         this.availableTags.subscribe((availableTags: Tag[]) => {
 

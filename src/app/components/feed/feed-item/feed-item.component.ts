@@ -1,27 +1,27 @@
 import {
     Component, ElementRef, Input, ViewChild, HostListener, Inject, Renderer2, EventEmitter, OnInit
-} from "@angular/core";
-import {NgxAni} from "ngxani";
-import {FeedItem} from "../../../entity/feed-item";
-import {DOCUMENT} from "@angular/common";
-import {MaterializeAction} from "angular2-materialize";
+} from '@angular/core';
+import {NgxAni} from 'ngxani';
+import {FeedItem} from '../../../entity/feed-item';
+import {DOCUMENT} from '@angular/common';
+import {MaterializeAction} from 'angular2-materialize';
 
 @Component({
     selector: 'feed-item',
     templateUrl: 'feed-item.template.html'
 })
 export class FeedItemComponent implements OnInit {
-    @HostListener('window:scroll', ['$event'])
-    onScrollEvent($event: Event) {
-        this.checkScrollAndFixDate();
-    }
-
     @Input() feedItem: FeedItem;
     @Input() displayDate: boolean;
     @ViewChild('feedDate') feedDate: ElementRef;
     @ViewChild('feedDateDock') feedDateDock: ElementRef;
-    modalActions: EventEmitter<MaterializeAction> = new EventEmitter();
     isEventDetailOpen: boolean;
+    modalActions: EventEmitter<MaterializeAction> = new EventEmitter();
+
+    @HostListener('window:scroll', ['$event'])
+    onScrollEvent($event: Event) {
+        this.checkScrollAndFixDate();
+    }
 
     constructor(private ngxAni: NgxAni,
                 private elRef: ElementRef,

@@ -9,11 +9,15 @@
   },
   {
     "name": "procházka",
-    "type": "tourism"
+      "type": "travel"
   },
   {
     "name": "rybaření",
     "type": "sport"
+  },
+    {
+        "name": "slackline",
+        "type": "sport"
   },
   {
     "name": "slackline",

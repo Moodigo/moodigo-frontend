@@ -1,4 +1,4 @@
-import * as _ from "underscore";
+import * as _ from 'underscore';
 
 
 export class HelperService {
@@ -6,10 +6,10 @@ export class HelperService {
         let autocompleteFormatReturn = '{';
 
         _.each(stringArr, (stringMember: string) => {
-            autocompleteFormatReturn += '"'+stringMember + '":' + null + ',';
+            autocompleteFormatReturn += '"' + stringMember + '":' + null + ',';
         });
         autocompleteFormatReturn = autocompleteFormatReturn.slice(0, autocompleteFormatReturn.length - 1);
-        autocompleteFormatReturn+='}';
+        autocompleteFormatReturn += '}';
 
         return JSON.parse(autocompleteFormatReturn);
     }

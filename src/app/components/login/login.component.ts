@@ -1,13 +1,13 @@
-import {Component, OnInit, HostBinding} from "@angular/core";
-import {FormControl, FormGroup} from "@angular/forms";
-import {Router} from "@angular/router";
-import {AuthService} from "../../services/auth.service";
+import {Component, OnInit, HostBinding} from '@angular/core';
+import {FormControl, FormGroup} from '@angular/forms';
+import {Router} from '@angular/router';
+import {AuthService} from '../../services/auth.service';
 
 @Component({
     selector: 'login',
     templateUrl: './login.template.html',
     host: {
-        "[attr.fxFill]": "100"
+        '[attr.fxFill]': '100'
     },
 })
 export class LoginComponent implements OnInit {

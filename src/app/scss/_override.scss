@@ -61,6 +61,12 @@ body {
             overflow-y: visible;
         }
     }
+    .switch label input[type=checkbox]:checked + .lever {
+        background-color: #ffffff;
+        &:after {
+            background-color: #f1f1f1;
+        }
+    }
     @media only screen and (min-width: 601px) {
         nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
             height: $nav-height;

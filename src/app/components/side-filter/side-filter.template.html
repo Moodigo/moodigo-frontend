@@ -2,7 +2,7 @@
      [materializeParams]="[pushpinSetting]"
      materialize="pushpin">
 
-    <div class="card filter" fxFlex="100">
+    <div class="card side-filter" fxFlex="100">
         <div class="card-stacked">
             <div class="card-title text-default"
                  (click)="openLocationModal()">
@@ -14,17 +14,35 @@
             <div class="divider padding-bottom"></div>
 
             <span class="card-title">
-             <i class="material-icons">accessibility</i>{{'side-filter.activities.header'|translate}}
-        </span>
-            <div class="card-content">
-                <tag (click)="toggleTagActive(tag.id)" *ngFor="let tag of filterTags" [name]="tag.name"></tag>
+                <i class="material-icons">accessibility</i>{{'side-filter.activities.header'|translate}}
+            </span>
+
+            <div class="card-content card-content__no-padding">
+                <div class="side-filter__tagTypeContainer" *ngFor="let type of filterTags | keys">
+                    <div class="side-filter__header" [ngClass]="'type--' + type.key" fxLayout="row">
+                        <h5 fxLayout="row" fxFlex fxLayoutAlign="center center">
+                            <activity-icon [activityType]="type.key"></activity-icon>
+                            <span fxLayout="column">{{type.key}}</span>
+                            <span class="switch" fxLayout="column" fxFlex>
+                                <label fxFlexAlign="end">
+                                    <input type="checkbox">
+                                    <span class="lever"></span>
+                                </label>
+                            </span>
+                        </h5>
+                    </div>
+                    <div class="side-filter__content ">
+                        <tag (click)="toggleTagActive(tag.id)" *ngFor="let tag of filterTags[type.key]"
+                             [name]="tag.name"></tag>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 <div materialize="modal" [materializeActions]="modalActions" id="modal-location" class="modal">
     <div class="modal-content">
-        <sebm-google-map (mapClick)="onClick()" [latitude]="lat" [longitude]="lng">
+        <sebm-google-map (mapClick)="onMapClick()" [latitude]="lat" [longitude]="lng">
             <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
         </sebm-google-map>
     </div>

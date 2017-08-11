@@ -1,12 +1,12 @@
-import {ReplaySubject} from "rxjs/ReplaySubject";
-import {FacebookService, LoginOptions, LoginResponse, LoginStatus} from "ngx-facebook";
-import {Inject} from "@angular/core";
-import {Observable} from "rxjs/Observable";
-import "rxjs/add/observable/fromPromise";
-import {User} from "../entity/user";
-import {APP_CONFIG} from "../app.config";
-import {IFacebookUserFields} from "../interfaces/app.interface";
-import {IUserResponse} from "../interfaces/response.interface";
+import {ReplaySubject} from 'rxjs/ReplaySubject';
+import {FacebookService, LoginOptions, LoginResponse, LoginStatus} from 'ngx-facebook';
+import {Inject} from '@angular/core';
+import {Observable} from 'rxjs/Observable';
+import 'rxjs/add/observable/fromPromise';
+import {User} from '../entity/user';
+import {APP_CONFIG} from '../app.config';
+import {IFacebookUserFields} from '../interfaces/app.interface';
+import {IUserResponse} from '../interfaces/response.interface';
 
 export class AuthService {
 
@@ -46,18 +46,20 @@ export class AuthService {
     }
 
     getFacebookUserInfo(): void {
-        this.facebookService.api('/' + APP_CONFIG.facebook.version + '/' + this.currentUser.id + '?fields=' + APP_CONFIG.facebook.fields.toString()).then((response: IFacebookUserFields) => {
-            this.currentUser.firstname = response.first_name;
-            this.currentUser.lastname = response.last_name;
-            this.currentUser.imageUrl = 'http://graph.facebook.com/' + this.currentUser.id + '/picture?type=square';
-        });
+        this.facebookService.api(
+            '/' + APP_CONFIG.facebook.version + '/' + this.currentUser.id + '?fields=' + APP_CONFIG.facebook.fields.toString())
+            .then((response: IFacebookUserFields) => {
+                this.currentUser.firstname = response.first_name;
+                this.currentUser.lastname = response.last_name;
+                this.currentUser.imageUrl = 'http://graph.facebook.com/' + this.currentUser.id + '/picture?type=square';
+            });
     }
 
     isLoggedInWithFacebook(): Observable<boolean> {
         return Observable.fromPromise(this.facebookService.getLoginStatus().then((response: LoginStatus) => {
             console.log(response);
-            if (response.status === "connected") {
-                this.currentUser = new User(<IUserResponse>{id: response.authResponse.userID});
+            if (response.status === 'connected') {
+                this.currentUser = new User(<IUserResponse>{ id: response.authResponse.userID });
                 this.isLoggedIn.next(true);
                 return true;
             } else {

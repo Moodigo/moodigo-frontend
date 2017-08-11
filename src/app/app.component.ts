@@ -14,7 +14,7 @@ import {APP_CONFIG} from "./app.config";
 
 export class AppComponent implements OnInit {
 
-    loggedIn: boolean = false;
+    loggedIn: boolean;
 
     constructor(private cacheService: CacheService,
                 private tagService: TagService,
@@ -24,11 +24,12 @@ export class AppComponent implements OnInit {
                 translateService: TranslateService) {
         translateService.use('cz');
 
-        let initParams: InitParams = {
+        const initParams: InitParams = {
             appId: APP_CONFIG.facebook.key,
             xfbml: true,
             version: 'v2.10'
         };
+        this.loggedIn = false;
 
         facebookService.init(initParams);
     }
@@ -37,8 +38,6 @@ export class AppComponent implements OnInit {
         this.authService.isLoggedIn.subscribe((response: boolean) => {
 
             if (response) {
-                this.cacheService.cacheFeed();
-                this.filterService.cacheFilterTags();
                 this.authService.getFacebookUserInfo();
                 this.authService.getFacebookUserFriends();
                 this.tagService.cacheAvailableTags();

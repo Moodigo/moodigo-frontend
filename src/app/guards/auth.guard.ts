@@ -1,8 +1,8 @@
 import {CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router} from '@angular/router';
 import {Inject} from '@angular/core';
-import {APP_CONFIG} from '../app.config';
 import {Observable} from 'rxjs/Observable';
-import {AuthService} from '../services/auth.service';
+import {AuthService} from '../modules/shared/services/auth.service';
+import {APP_CONFIG} from '../modules/root/app.config';
 
 export class AuthGuard implements CanActivate {
 
@@ -17,7 +17,7 @@ export class AuthGuard implements CanActivate {
             if (loginResponse) {
                 return true;
             } else {
-                this.router.navigate([APP_CONFIG.routes.login]);
+                this.router.navigate(['/login']);
                 return false;
             }
         }).catch((err) => {

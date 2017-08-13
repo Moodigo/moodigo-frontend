@@ -9,7 +9,7 @@ import {AuthService} from '../../../shared/services/auth.service';
     host: {
         '[attr.fxFill]': '100'
     },
-})
+}
 export class LoginComponent implements OnInit {
     @HostBinding('class') classes = 'width-100 height-100';
 
@@ -25,6 +25,8 @@ export class LoginComponent implements OnInit {
             }
         });
     }
+
+     
 
     ngOnInit(): void {
         this.formGroup = new FormGroup({

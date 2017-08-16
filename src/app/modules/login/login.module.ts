@@ -18,5 +18,5 @@ const routerConfig: Route[] = [
         RouterModule.forChild(routerConfig)
     ]
 })
-export default class LoginModule {
+export class LoginModule {
 }

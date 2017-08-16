@@ -13,26 +13,22 @@ import {Http} from '@angular/http';
 import {APP_CONFIG} from './app.config';
 import {AgmCoreModule} from 'angular2-google-maps/core';
 import {FacebookModule} from 'ngx-facebook';
-import {LoginComponent} from '../login/components/login/login.component';
+import LoginModule from 'app/modules/login/login.module';
 
 const routes: Route[] = [
     {
         path: '',
         loadChildren: '../feed/feed.module'
-    },
-    {
-        path: 'login',
-        component: LoginComponent
     }
 ];
 
 @NgModule({
     declarations: [
-        AppComponent,
-        LoginComponent
+        AppComponent
     ],
     imports: [
         ProfileModule,
+        LoginModule,
         NoopAnimationsModule,
         SharedModule.forRoot(),
         TranslateModule.forRoot({

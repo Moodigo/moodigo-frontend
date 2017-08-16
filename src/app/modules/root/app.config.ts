@@ -1,3 +1,4 @@
+console.log(window.location.protocol + '//' + window.location.hostname + ':9002');
 export const APP_CONFIG = {
     event: {
         titleCharLimit: 50
@@ -18,7 +19,7 @@ export const APP_CONFIG = {
         login: '/login'
     },
     api: {
-        url: 'http://localhost:9002/'
+        url: window.location.protocol + '//' + window.location.hostname + ':9002/'
     },
     date: {
         shortFormat: 'D.M',

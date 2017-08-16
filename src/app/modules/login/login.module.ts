@@ -19,5 +19,4 @@ const routerConfig: Route[] = [
     ]
 })
 export class LoginModule {
-  
 }

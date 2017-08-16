@@ -13,7 +13,7 @@ import {Http} from '@angular/http';
 import {APP_CONFIG} from './app.config';
 import {AgmCoreModule} from 'angular2-google-maps/core';
 import {FacebookModule} from 'ngx-facebook';
-import LoginModule from 'app/modules/login/login.module';
+import {LoginModule} from '../login/login.module';
 
 const routes: Route[] = [
     {
